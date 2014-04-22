@@ -28,7 +28,7 @@ public class AccLDAP {
     public void CercaDinsLDAP(String uid,String ou) {
         Properties connexio = new Properties();
         connexio.put(Context.INITIAL_CONTEXT_FACTORY,"com.sun.jndi.ldap.LdapCtxFactory");
-        connexio.put(Context.PROVIDER_URL,"ldap://www.fjeclot.net:389");
+        connexio.put(Context.PROVIDER_URL,"ldap://adreça_ip_o_nom");
         try {
             DirContext context = new InitialDirContext(connexio);
             Attributes attrs = context.getAttributes("uid=,ou=,dc=,dc=");
@@ -55,7 +55,7 @@ public class AccLDAP {
         //
         Properties connexio = new Properties();
         connexio.put(Context.INITIAL_CONTEXT_FACTORY,"com.sun.jndi.ldap.LdapCtxFactory");
-        connexio.put(Context.PROVIDER_URL,"ldap://www.fjeclot.net:389");
+        connexio.put(Context.PROVIDER_URL,"ldap://adreça_ip_o_nom:port");
         connexio.put(Context.SECURITY_AUTHENTICATION, "simple");
         connexio.put(Context.SECURITY_PRINCIPAL, "cn=,dc=,dc=");
         connexio.put(Context.SECURITY_CREDENTIALS, CtsnyaAdmin);
